@@ -1,5 +1,4 @@
 import { React } from "react";
-import Router from "react-router";
 import { HashRouter as Router, Route } from "react-router-dom";
 import Child from "./Child"; // import child here
 
@@ -8,7 +7,7 @@ export default class Main extends Component {
         super(props)
 
         this.state={
-            test: "test",
+            test1: "test",
             test2: "test2"
         }
 
@@ -29,6 +28,9 @@ export default class Main extends Component {
                             <h1 className="text-center">Test jumbotron</h1>
                         </div>
                     </div>
+                </div>
+                <div className="row">
+                    <Route path="/" render={()=><Child data={this.state.test1}/>}/>
                 </div>
             </div>
         )

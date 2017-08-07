@@ -1,11 +1,11 @@
 // server depenencies
-import express from "express";
-import bodyParser from "body-parser";
-import logger from "logger";
-import mongoose from "mongoose";
+var express = require("express"); 
+var bodyParser = require("body-parser"); 
+var logger = require("morgan"); 
+var mongoose = require("mongoose"); 
 
 // require models schema
-import model from "./models/model";
+var model = require("./models/model");
 
 // create instance of express and set a port
 var app = express();
@@ -23,15 +23,15 @@ app.use(express.static("public"));
 mongoose.connect("mongo://localhost/yourappnamehere");
 var db = mongoose.connection;
 
-db.on("error", (error) => {
+db.on("error", function(err){
     console.log("Mongoose Error: ", err);
 });
 
-db.once("open", () => {
+db.once("open", function(){
     console.log("Mongoose connection successful.");
 })
 
 // listener
-app.listen(PORT, () => {
-    console.log(`App listening on PORT: ${PORT}`);
-})
+app.listen(PORT, function(){
+    console.log("app listening on port: " + PORT);
+});

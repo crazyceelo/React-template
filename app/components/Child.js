@@ -1,5 +1,4 @@
 import { React } from "react";
-import Router from "react-router";
 import { HashRouter as Router, Route } from "react-router-dom";
 
 export default class Child extends Component {
