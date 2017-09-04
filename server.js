@@ -10,7 +10,7 @@ var model = require("./models/model");
 
 // create instance of express and set a port
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 
 // run morgan for logging
 app.use(logger("dev"));
