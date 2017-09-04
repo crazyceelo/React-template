@@ -7,7 +7,7 @@ export default class Main extends Component {
         super(props)
 
         this.state={
-            test1: "test",
+            test1: "test1",
             test2: "test2"
         }
 
@@ -30,7 +30,7 @@ export default class Main extends Component {
                     </div>
                 </div>
                 <div className="row">
-                    <Route path="/" render={()=><Child data={this.state.test1}/>}/>
+                    <Route path="/" render={()=><Child test1={this.state.test1} test2={this.state.test2}/>}/>
                 </div>
             </div>
         )
