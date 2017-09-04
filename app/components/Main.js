@@ -14,11 +14,6 @@ export default class Main extends Component {
         // function().bind(this);
     }
 
-    // React life cycles if needed
-
-    // functions
-
-    // render page
     render(){
         return(
             <div className="container">

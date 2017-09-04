@@ -1,27 +1,27 @@
 {
-  "name": "react-template",
+  "name": "react-portfolio",
   "version": "1.0.0",
-  "description": "react-template",
+  "description": "react-portfolio",
   "main": "server.js",
   "scripts": {
-    "test": "react-template",
+    "test": "react-portfolio",
     "watch": "webpack --watch",
     "build": "webpack",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/crazyceelo/React-template.git"
+    "url": "git+https://github.com/crazyceelo/React-portfolio.git"
   },
   "keywords": [
-    "react-template"
+    "react-portfolio"
   ],
   "author": "Carlos Perez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/crazyceelo/React-template/issues"
+    "url": "https://github.com/crazyceelo/React-portfolio/issues"
   },
-  "homepage": "https://github.com/crazyceelo/React-template#readme",
+  "homepage": "https://github.com/crazyceelo/React-portfolio#readme",
   "dependencies": {
     "axios": "^0.16.2",
     "babel-preset-stage-2": "^6.24.1",
