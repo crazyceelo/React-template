@@ -1,4 +1,4 @@
-import { React } from "react";
+import React, { Component } from 'react';
 import { HashRouter as Router, Route } from "react-router-dom";
 
 export default class Child extends Component {

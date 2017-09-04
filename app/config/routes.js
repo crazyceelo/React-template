@@ -3,8 +3,8 @@ import { HashRouter as Router, Route } from "react-router-dom";
 import Main from "../components/Main";
 
 // not sure if you need these. try without. 
-var hashHistory = router.hashHistory; 
-var IndexRoute = router.IndexRoute;
+// var hashHistory = router.hashHistory; 
+// var IndexRoute = router.IndexRoute;
 
 export default (
     <Router>

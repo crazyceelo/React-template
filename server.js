@@ -2,7 +2,8 @@
 var express = require("express"); 
 var bodyParser = require("body-parser"); 
 var logger = require("morgan"); 
-var mongoose = require("mongoose"); 
+var mongoose = require("mongoose");
+var routes = require("./config/api-routes");
 
 // require models schema
 var model = require("./models/model");
@@ -20,16 +21,18 @@ app.use(bodyParser.json({ type: "application/vnd.api+json"}));
 app.use(express.static("public"));
 
 // MongoDB configuration
-mongoose.connect("mongo://localhost/yourappnamehere");
+mongoose.connect("mongodb://localhost/yourappnamehere");
 var db = mongoose.connection;
 
-db.on("error", function(err){
-    console.log("Mongoose Error: ", err);
+db.on("error", function(error){
+    console.log("Mongoose Error: ", error);
 });
 
 db.once("open", function(){
     console.log("Mongoose connection successful.");
 })
+
+// routes(app);
 
 // listener
 app.listen(PORT, function(){
